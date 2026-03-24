@@ -1,0 +1,57 @@
+{
+  "title": "EnsolarX (Modbus TCP)",
+  "config": {
+    "flow_title": "EnsolarX ({name})",
+    "step": {
+      "user": {
+        "title": "Połączenie z EnsolarX",
+        "description": "Podaj dane połączenia Modbus TCP. Domyślnie ustawione są tylko port i Unit ID.",
+        "data": {
+          "host": "Adres IP",
+          "port": "Port TCP",
+          "unit_id": "Unit ID",
+          "scan_interval": "Interwał odczytu (s)"
+        }
+      },
+      "registers": {
+        "title": "Wybór rejestrów",
+        "description": "Zaznacz rejestry, które mają zostać utworzone jako encje. Ten wybór będzie można później zmienić w Opcjach integracji.",
+        "data": {
+          "selected_registers": "Rejestry do odczytu"
+        }
+      },
+      "reconfigure": {
+        "title": "Zmień połączenie",
+        "description": "Zmień parametry połączenia Modbus TCP.",
+        "data": {
+          "host": "Adres IP",
+          "port": "Port TCP",
+          "unit_id": "Unit ID",
+          "scan_interval": "Interwał odczytu (s)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "To urządzenie jest już skonfigurowane."
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z urządzeniem.",
+      "select_at_least_one_register": "Wybierz co najmniej jeden rejestr."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje EnsolarX",
+        "description": "Zmień interwał odczytu i zaznaczone rejestry.",
+        "data": {
+          "scan_interval": "Interwał odczytu (s)",
+          "selected_registers": "Rejestry do odczytu"
+        }
+      }
+    },
+    "error": {
+      "select_at_least_one_register": "Wybierz co najmniej jeden rejestr."
+    }
+  }
+}

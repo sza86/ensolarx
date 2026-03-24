@@ -1,0 +1,16 @@
+{
+  "domain": "ensolarx",
+  "name": "EnsolarX (Modbus TCP)",
+  "version": "1.5.0",
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "integration_type": "hub",
+  "loggers": [
+    "custom_components.ensolarx"
+  ],
+  "documentation": "https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME",
+  "issue_tracker": "https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME/issues",
+  "codeowners": [
+    "@YOUR_GITHUB_USERNAME"
+  ]
+}

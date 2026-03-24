@@ -1,0 +1,57 @@
+{
+  "title": "EnsolarX (Modbus TCP)",
+  "config": {
+    "flow_title": "EnsolarX ({name})",
+    "step": {
+      "user": {
+        "title": "Connect to EnsolarX",
+        "description": "Enter Modbus TCP connection settings. Only port and Unit ID have defaults.",
+        "data": {
+          "host": "IP address",
+          "port": "TCP port",
+          "unit_id": "Unit ID",
+          "scan_interval": "Polling interval (s)"
+        }
+      },
+      "registers": {
+        "title": "Select registers",
+        "description": "Choose which registers should be created as entities. You can change this later in the integration options.",
+        "data": {
+          "selected_registers": "Registers to read"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure connection",
+        "description": "Update Modbus TCP connection parameters.",
+        "data": {
+          "host": "IP address",
+          "port": "TCP port",
+          "unit_id": "Unit ID",
+          "scan_interval": "Polling interval (s)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the device.",
+      "select_at_least_one_register": "Select at least one register."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "EnsolarX options",
+        "description": "Change polling interval and selected registers.",
+        "data": {
+          "scan_interval": "Polling interval (s)",
+          "selected_registers": "Registers to read"
+        }
+      }
+    },
+    "error": {
+      "select_at_least_one_register": "Select at least one register."
+    }
+  }
+}
