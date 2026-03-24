@@ -2,7 +2,7 @@
 
 Niestandardowa integracja Home Assistant do odczytu urządzeń EnsolarX przez Modbus TCP.
 
-Integracja została przygotowana z myślą o użytkownikach, którzy chcą samodzielnie wybrać dokładnie te rejestry, które mają być odczytywane — zarówno podczas pierwszej konfiguracji, jak i później z poziomu opcji integracji.
+Integracja została przygotowana dla użytkowników, którzy chcą samodzielnie wybrać dokładnie te rejestry, które mają być odczytywane — zarówno podczas pierwszej konfiguracji, jak i później z poziomu opcji integracji.
 
 ## Najważniejsze funkcje
 
@@ -16,13 +16,19 @@ Integracja została przygotowana z myślą o użytkownikach, którzy chcą samod
 - obsługa diagnostyki integracji,
 - gotowość do instalacji ręcznej oraz przez HACS jako repozytorium niestandardowe.
 
+## Wymagania
+
+- działająca instalacja Home Assistant,
+- urządzenie dostępne przez Modbus TCP,
+- poprawny adres hosta lub IP, port TCP i Unit ID / Slave ID urządzenia.
+
 ## Instalacja
 
 ### Opcja 1: HACS
 
 1. Otwórz **HACS**.
 2. Przejdź do **Niestandardowe repozytoria**.
-3. Dodaj to repozytorium jako **Integrację**.
+3. Dodaj repozytorium `https://github.com/sza86/ensolarx` jako **Integrację**.
 4. Zainstaluj **EnsolarX Modbus TCP**.
 5. Uruchom ponownie Home Assistant.
 6. Przejdź do **Ustawienia → Urządzenia i usługi → Dodaj integrację**.
@@ -49,7 +55,7 @@ Podczas pierwszego uruchomienia integracja korzysta z dwuetapowego kreatora konf
 
 Użytkownik podaje:
 
-- adres hosta / IP,
+- adres hosta lub IP,
 - port TCP,
 - Unit ID / Slave ID,
 - interwał odczytu.
@@ -61,8 +67,7 @@ Wartości domyślne:
 
 ### Krok 2: wybór rejestrów
 
-Integracja wyświetla pełną listę obsługiwanych rejestrów.
-Tworzone są wyłącznie encje dla rejestrów zaznaczonych przez użytkownika.
+Integracja wyświetla pełną listę obsługiwanych rejestrów. Encje są tworzone wyłącznie dla pozycji zaznaczonych przez użytkownika.
 
 Po instalacji wybrane rejestry oraz interwał odczytu można zmienić z poziomu opcji integracji.
 
@@ -107,12 +112,9 @@ logger:
 │           └── pl.json
 ├── hacs.json
 ├── LICENSE
+├── CHANGELOG.md
 └── README.md
 ```
-
-## Zgodność
-
-Integracja została przygotowana dla współczesnych wersji Home Assistant opartych o config entries oraz `runtime_data`.
 
 ## Zgłaszanie problemów
 
@@ -123,6 +125,10 @@ Przy zgłoszeniu błędu warto dołączyć:
 - model urządzenia,
 - listę wybranych rejestrów,
 - dane diagnostyczne lub logi debug.
+
+Zgłoszenia można dodawać tutaj:
+
+- `https://github.com/sza86/ensolarx/issues`
 
 ## Zastrzeżenie
 
