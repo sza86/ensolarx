@@ -2,7 +2,7 @@
 
 Niestandardowa integracja Home Assistant do odczytu urządzeń EnsolarX przez Modbus TCP.
 
-Integracja została przygotowana dla użytkowników, którzy chcą samodzielnie wybrać dokładnie te rejestry, które mają być odczytywane — zarówno podczas pierwszej konfiguracji, jak i później z poziomu opcji integracji.
+Repozytorium zawiera kompletną integrację, która umożliwia ręczny wybór rejestrów Modbus podczas pierwszej konfiguracji oraz późniejszą zmianę tego wyboru z poziomu opcji integracji.
 
 ## Najważniejsze funkcje
 
@@ -20,23 +20,25 @@ Integracja została przygotowana dla użytkowników, którzy chcą samodzielnie 
 
 - działająca instalacja Home Assistant,
 - urządzenie dostępne przez Modbus TCP,
-- poprawny adres hosta lub IP, port TCP i Unit ID / Slave ID urządzenia.
+- poprawny adres hosta lub IP,
+- poprawny port TCP,
+- poprawny Unit ID urządzenia.
 
 ## Instalacja
 
-### Opcja 1: HACS
+### Instalacja przez HACS
 
 1. Otwórz **HACS**.
 2. Przejdź do **Niestandardowe repozytoria**.
 3. Dodaj repozytorium `https://github.com/sza86/ensolarx` jako **Integrację**.
-4. Zainstaluj **EnsolarX Modbus TCP**.
+4. Zainstaluj **EnsolarX (Modbus TCP)**.
 5. Uruchom ponownie Home Assistant.
 6. Przejdź do **Ustawienia → Urządzenia i usługi → Dodaj integrację**.
-7. Wyszukaj **EnsolarX Modbus TCP**.
+7. Wyszukaj **EnsolarX (Modbus TCP)**.
 
-### Opcja 2: instalacja ręczna
+### Instalacja ręczna
 
-1. Pobierz to repozytorium.
+1. Pobierz zawartość repozytorium.
 2. Skopiuj katalog `custom_components/ensolarx` do katalogu konfiguracyjnego Home Assistant:
 
 ```text
@@ -45,7 +47,7 @@ Integracja została przygotowana dla użytkowników, którzy chcą samodzielnie 
 
 3. Uruchom ponownie Home Assistant.
 4. Przejdź do **Ustawienia → Urządzenia i usługi → Dodaj integrację**.
-5. Wyszukaj **EnsolarX Modbus TCP**.
+5. Wyszukaj **EnsolarX (Modbus TCP)**.
 
 ## Konfiguracja
 
@@ -57,7 +59,7 @@ Użytkownik podaje:
 
 - adres hosta lub IP,
 - port TCP,
-- Unit ID / Slave ID,
+- Unit ID,
 - interwał odczytu.
 
 Wartości domyślne:
@@ -112,7 +114,6 @@ logger:
 │           └── pl.json
 ├── hacs.json
 ├── LICENSE
-├── CHANGELOG.md
 └── README.md
 ```
 
@@ -126,7 +127,7 @@ Przy zgłoszeniu błędu warto dołączyć:
 - listę wybranych rejestrów,
 - dane diagnostyczne lub logi debug.
 
-Zgłoszenia można dodawać tutaj:
+Zgłoszenia błędów można dodawać tutaj:
 
 - `https://github.com/sza86/ensolarx/issues`
 
